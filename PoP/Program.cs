@@ -33,11 +33,11 @@ namespace PoP
             popConfig.HttpPath = "$odata";
 
             var PopResult = app.AcquireTokenForClient(new string[] { scope })
-                .WithProofOfPossession(popConfig)
-                .ExecuteAsync()
-                .ConfigureAwait(false)
-                .GetAwaiter()
-                .GetResult();
+                               .WithProofOfPossession(popConfig)
+                               .ExecuteAsync()
+                               .ConfigureAwait(false)
+                               .GetAwaiter()
+                               .GetResult();
 
             Console.WriteLine(PopResult.AccessToken);
         }
